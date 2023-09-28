@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Stream Landing Page</title>
+  <style>
+    #video-container {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  
+    #video-player {
+      width: 100%;
+      height: auto;
+    }
+  
+    #play-button {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+  
+</head>
+<body>
+
+<div id="video-container">
+  <video id="video-player" controls>
+    Your browser does not support the video tag.
+  </video>
+  <button id="play-button">Play</button>
+</div>
+
+<script>
+    const videoPlayer = document.getElementById('video-player');
+    const playButton = document.getElementById('play-button');
+  
+    const rtspUrl = 'YOUR_RTSP_URL_HERE'; // Replace with the actual RTSP URL
+  
+    playButton.addEventListener('click', () => {
+      videoPlayer.src = rtspUrl;
+      videoPlayer.play();
+    });
+  </script>
+  
+
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Live Stream Landing Page</title>
+</head>
+<body>
+
+<div>
+    <h1>Welcome to our Live Stream</h1>
+    <video id="livestream" controls autoplay>
+ 
+        <source src="rtsp://your_rtsp_url_here" type="application/x-rtsp">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<script>
+    // JavaScript to handle video play/pause
+    const video = document.getElementById('livestream');
+    video.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    });
+</script>
+
+</body>
+</html> -->
